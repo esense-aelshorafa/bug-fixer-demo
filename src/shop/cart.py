@@ -24,4 +24,4 @@ class Cart:
 
         `percent` is on a 0-100 scale, e.g. 10 means 10% off.
         """
-        return round(self.subtotal() * (1 - percent), 2)
+        return round(self.subtotal() * (1 - percent / 100), 2)
