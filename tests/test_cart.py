@@ -16,3 +16,9 @@ def test_zero_percent_discount_keeps_total():
     cart = Cart()
     cart.add(Item("book", 30.0))
     assert cart.apply_discount(0) == 30.0
+
+
+def test_percentage_discount_reduces_total():
+    cart = Cart()
+    cart.add(Item("keyboard", 100.0, 2))
+    assert cart.apply_discount(10) == 180.0
